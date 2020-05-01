@@ -29,7 +29,8 @@
     "minimatch": "^3.0.0",
     "progress": "^2.0.3",
     "shelljs": "^0.8.3",
-    "typedoc-default-themes": "^0.10.0"
+    "typedoc-default-themes": "^0.10.0",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "typescript": ">=3.8.3"
@@ -67,8 +68,9 @@
     "build_and_test": "npm run build && npm run test",
     "lint": "tslint --project .",
     "prepublishOnly": "npm run lint && npm run build_and_test",
-    "prepare": "npm run build",
-    "clean": "rm -rf node_modules package-lock.json lib coverage"
+    "prepare": "npm run snyk-protect && npm run build",
+    "clean": "rm -rf node_modules package-lock.json lib coverage",
+    "snyk-protect": "snyk protect"
   },
   "keywords": [
     "typescript",
@@ -83,5 +85,6 @@
     "exclude": [
       "**/*.d.ts"
     ]
-  }
+  },
+  "snyk": true
 }
