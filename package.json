@@ -22,7 +22,7 @@
   "dependencies": {
     "fs-extra": "^8.1.0",
     "handlebars": "^4.7.6",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^9.18.2",
     "lodash": "^4.17.15",
     "lunr": "^2.3.8",
     "marked": "0.8.2",
